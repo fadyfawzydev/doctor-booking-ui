@@ -1,22 +1,21 @@
 import '@testing-library/jest-dom';
-import { expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import matchers from '@testing-library/jest-dom/matchers';
 
-// Extend Vitest's expect method with methods from react-testing-library
+// Extend expect with jest-dom matchers
 expect.extend(matchers);
 
-// Cleanup after each test case
+// Cleanup after each test
 afterEach(() => {
   cleanup();
 });
 
 // Mock the next/navigation module
-vi.mock('next/navigation', () => ({
+jest.mock('next/navigation', () => ({
   useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
   }),
   usePathname: () => '',
   useSearchParams: () => new URLSearchParams(),

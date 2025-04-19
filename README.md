@@ -33,7 +33,7 @@ A modern, accessible, and responsive web application for booking doctor appointm
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: Zustand
-- **Testing**: Jest, React Testing Library
+- **Testing**: Jest, React Testing Library, @testing-library/jest-dom
 - **Development Tools**: Cursor IDE
 
 ## Project Structure
@@ -110,7 +110,10 @@ This project was developed using Cursor IDE, which provided several advantages:
 
 4. **Building for Production**
    ```bash
+   # Build the application
    npm run build
+
+   # Start the production server
    npm start
    ```
 
@@ -119,9 +122,48 @@ This project was developed using Cursor IDE, which provided several advantages:
 The project uses Jest and React Testing Library for comprehensive testing:
 
 - **Component Tests**: Verify rendering and interaction
+  - Component rendering
+  - User interactions
+  - State changes
+  - Props handling
+
 - **Accessibility Tests**: Ensure ARIA attributes and roles
+  - ARIA labels and roles
+  - Keyboard navigation
+  - Screen reader compatibility
+  - Focus management
+
 - **Theme Tests**: Verify dark mode and high contrast functionality
+  - Theme switching
+  - Color contrast
+  - Font size changes
+  - High contrast mode
+
 - **State Management Tests**: Verify store actions and state updates
+  - Appointment booking
+  - Appointment cancellation
+  - Theme state changes
+  - Filter state management
+
+## Development Workflow
+
+1. **Code Organization**
+   - Components are organized by feature
+   - Tests are co-located with components
+   - Types are centralized in the types directory
+   - State management is handled by Zustand stores
+
+2. **Testing Approach**
+   - Unit tests for individual components
+   - Integration tests for component interactions
+   - Accessibility tests for ARIA compliance
+   - State management tests for store actions
+
+3. **Build Process**
+   - Type checking with TypeScript
+   - Linting with ESLint
+   - Testing with Jest
+   - Production build optimization
 
 ## Accessibility Features
 
