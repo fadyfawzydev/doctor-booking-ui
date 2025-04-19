@@ -1,90 +1,154 @@
-# Doctor Booking UI Module
+# Doctor Booking System
 
-A responsive and accessible React application for booking doctor appointments, built with Next.js 15, Tailwind CSS, and Zustand.
+A modern, accessible, and responsive web application for booking doctor appointments. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- Doctor directory with filtering capabilities
-- Booking modal for scheduling appointments
-- Appointments management system
-- Fully responsive design
-- Accessible UI components
-- State management with Zustand
+### Core Functionality
+- View list of available doctors with their specialties and ratings
+- Book appointments with doctors
+- View and manage your appointments
+- Filter doctors by specialty, day, and time
+- Responsive design for all screen sizes
+
+### Accessibility Features
+- Dark mode support
+- High contrast mode
+- Adjustable font sizes
+- Screen reader support with ARIA labels and live regions
+- Keyboard navigation support
+- Focus management in modals
+- Semantic HTML structure
+
+### User Experience
+- Real-time filtering of doctors
+- Visual feedback for booked time slots
+- Clear appointment management
+- Intuitive navigation between doctors and appointments
+- Responsive design with mobile-first approach
 
 ## Tech Stack
 
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- Zustand
-
-## Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd doctor-booking-ui
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+- **Framework**: Next.js 15.3.1
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Testing**: Jest, React Testing Library
+- **Development Tools**: Cursor IDE
 
 ## Project Structure
 
 ```
 src/
-  ├── app/
-  │   └── page.tsx           # Main page component
-  ├── components/
-  │   ├── DoctorCard.tsx     # Doctor card component
-  │   ├── BookingModal.tsx   # Booking modal component
-  │   └── AppointmentsList.tsx # Appointments list component
-  ├── store/
-  │   └── bookingStore.ts    # Zustand store for appointments
-  └── data/
-      └── mockData.ts        # Mock data for doctors
+├── app/                    # Next.js app directory
+│   └── page.tsx           # Main application page
+├── components/            # React components
+│   ├── __tests__/        # Component tests
+│   ├── AccessibilitySettings.tsx
+│   ├── AppointmentsList.tsx
+│   ├── BookingModal.tsx
+│   ├── DarkModeToggle.tsx
+│   ├── DoctorCard.tsx
+│   └── icons/            # SVG icons
+├── data/                 # Mock data
+│   └── mockData.ts
+├── store/               # State management
+│   ├── bookingStore.ts
+│   └── themeStore.ts
+└── types/              # TypeScript types
+    └── index.ts
 ```
+
+## Development with Cursor
+
+This project was developed using Cursor IDE, which provided several advantages:
+
+1. **AI-Powered Development**
+   - Intelligent code completion
+   - Context-aware suggestions
+   - Automated code improvements
+   - Real-time error detection
+
+2. **Enhanced Productivity**
+   - Quick file navigation
+   - Integrated terminal
+   - Git integration
+   - Code refactoring tools
+
+3. **Testing Support**
+   - Integrated test runner
+   - Test file generation
+   - Test coverage visualization
+
+## Getting Started
+
+1. **Installation**
+   ```bash
+   npm install
+   ```
+
+2. **Development**
+   ```bash
+   # Start development server (standard)
+   npm run dev
+
+   # Start development server with Turbopack (experimental)
+   npm run dev:turbo
+   ```
+
+3. **Testing**
+   ```bash
+   # Run all tests
+   npm test
+
+   # Run tests in watch mode
+   npm run test:watch
+
+   # Generate test coverage report
+   npm run test:coverage
+   ```
+
+4. **Building for Production**
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## Testing Strategy
+
+The project uses Jest and React Testing Library for comprehensive testing:
+
+- **Component Tests**: Verify rendering and interaction
+- **Accessibility Tests**: Ensure ARIA attributes and roles
+- **Theme Tests**: Verify dark mode and high contrast functionality
+- **State Management Tests**: Verify store actions and state updates
 
 ## Accessibility Features
 
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- Focus management
-- Screen reader compatibility
+1. **Visual Adjustments**
+   - Dark mode toggle
+   - High contrast mode
+   - Font size controls
 
-## Known Limitations
+2. **Screen Reader Support**
+   - ARIA labels for all interactive elements
+   - Live regions for dynamic content
+   - Proper heading structure
+   - Descriptive alt text for images
 
-1. Mock data is static and doesn't reflect real-time availability
-2. No backend integration for actual booking system
-3. No user authentication system
-4. No persistent storage (appointments are stored in memory)
+3. **Keyboard Navigation**
+   - Focus management in modals
+   - Tab order optimization
+   - Keyboard shortcuts for common actions
 
-## Next Steps
+## Contributing
 
-1. Integrate with a backend API
-2. Add user authentication
-3. Implement persistent storage
-4. Add real-time availability updates
-5. Include doctor reviews and ratings
-6. Add appointment reminders
-7. Implement payment processing
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-## AI Tools Used
+## License
 
-This project was developed with the assistance of AI tools for:
-- Code generation and structure
-- Accessibility best practices implementation
-- Component design and layout
-- State management patterns
-- Responsive design implementation
+This project is licensed under the MIT License - see the LICENSE file for details.
