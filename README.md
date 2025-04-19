@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Doctor Booking UI Module
 
-## Getting Started
+A responsive and accessible React application for booking doctor appointments, built with Next.js 15, Tailwind CSS, and Zustand.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Doctor directory with filtering capabilities
+- Booking modal for scheduling appointments
+- Appointments management system
+- Fully responsive design
+- Accessible UI components
+- State management with Zustand
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Zustand
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd doctor-booking-ui
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+  ├── app/
+  │   └── page.tsx           # Main page component
+  ├── components/
+  │   ├── DoctorCard.tsx     # Doctor card component
+  │   ├── BookingModal.tsx   # Booking modal component
+  │   └── AppointmentsList.tsx # Appointments list component
+  ├── store/
+  │   └── bookingStore.ts    # Zustand store for appointments
+  └── data/
+      └── mockData.ts        # Mock data for doctors
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Accessibility Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Focus management
+- Screen reader compatibility
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Known Limitations
 
-## Learn More
+1. Mock data is static and doesn't reflect real-time availability
+2. No backend integration for actual booking system
+3. No user authentication system
+4. No persistent storage (appointments are stored in memory)
 
-To learn more about Next.js, take a look at the following resources:
+## Next Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Integrate with a backend API
+2. Add user authentication
+3. Implement persistent storage
+4. Add real-time availability updates
+5. Include doctor reviews and ratings
+6. Add appointment reminders
+7. Implement payment processing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## AI Tools Used
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was developed with the assistance of AI tools for:
+- Code generation and structure
+- Accessibility best practices implementation
+- Component design and layout
+- State management patterns
+- Responsive design implementation
